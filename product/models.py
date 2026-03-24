@@ -22,7 +22,7 @@ class Product(models.Model):
     color = models.CharField(verbose_name="цвет", max_length=50)
     memory = models.CharField(verbose_name="память", max_length=50)
     simcard = models.CharField(verbose_name="сим-карта", max_length=50)
-    image = models.ImageField(verbose_name="изображение", upload_to='products/', null=True, blank=True)
+    image = models.ImageField(verbose_name="фото", upload_to='products/', null=True, blank=True)
     subcategory = models.ForeignKey(SubCategory, on_delete=models.CASCADE, related_name='products', null=True)
     
 
